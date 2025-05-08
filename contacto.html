@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - MARTINEZZ</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="Hoja de estilo contacto.css">
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Estilos del botón de volver arriba -->
+    <link rel="stylesheet" href="boton-subir.css">
+</head>
+<body>
+    <h1>MARTINEZZ</h1>
+    <!-- Encabezado de la página -->
+    <div>
+        <nav>
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="index.php">INICIO</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link fs-5" href="catalogo.html">CATALOGO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="contacto.html">CONTACTO</a>
+            </li>
+         </ul>
+        </nav>
+    </div>
+
+    <section>
+        <h2>Contacto</h2>
+        <form action="Formulario.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Telefono:</label>
+            <input type="telefono" id="telefono" name="telefono" required>
+
+            <label for="direccion">Direccion:</label>
+            <input type="direccion" id="direccion" name="direccion" required>
+
+
+            <button type="submit">GUARDAR</button>
+        </form>
+    </section>
+
+    <center>
+        <img src="Imagenes de la página/Logo.jpg" alt="Logo MARTINEZZ">
+    </center>
+
+    <footer>
+        <p>&copy; 2024 MARTINEZZ. Todos los derechos reservados.</p>
+    </footer>
+    
+    <!-- Botón para volver arriba -->
+    <button class="boton-subir" id="botonSubir" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="JavaScript-Archivo.js"></script>
+    <script src="boton-subir.js"></script>
+
+</body>
+</html>

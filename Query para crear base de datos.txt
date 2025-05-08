@@ -1,0 +1,14 @@
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS martinezz_db;
+
+-- Usar la base de datos recién creada
+USE martinezz_db;
+
+-- Crear la tabla 'usuarios'
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,       -- Campo ID auto incremental
+    nombre VARCHAR(100) NOT NULL,            -- Campo para el nombre del usuario
+    email VARCHAR(100) NOT NULL,             -- Campo para el correo electrónico
+    telefono VARCHAR(20) NOT NULL,           -- Campo para el número de teléfono
+    direccion VARCHAR(255) NOT NULL          -- Campo para la dirección
+);

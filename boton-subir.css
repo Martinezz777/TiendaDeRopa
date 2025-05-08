@@ -1,0 +1,33 @@
+/* ----- BOTÓN VOLVER ARRIBA ----- */
+.boton-subir {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #ff5f6d, #ffc371);
+    border: none;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.boton-subir:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #ffc371, #ff5f6d);
+}
+
+.boton-subir.visible {
+    display: flex;
+}
+
+.boton-subir i {
+    color: white;
+    font-size: 24px;
+} 

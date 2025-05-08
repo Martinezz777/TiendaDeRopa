@@ -1,0 +1,164 @@
+/* ================== ESTILO GENERAL ================== */
+
+/* Fondo general con degradado oscuro */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Arial', sans-serif; /* Fuente legible y moderna */
+    background: linear-gradient(135deg, #1a1a1a, #333333); /* Color Fondo  */
+    color: #f2f2f2; /* Color claro para el texto */
+}
+
+
+/* ================== Carrito ================== */
+#CarritoOffcanvas{
+    width: 90vw;
+    max-width: 500px;
+}
+ 
+/* Barra de navegacion */
+
+.nav-link {
+color: rgb(218, 23, 23) !important;
+}
+
+.nav-link:hover {
+color: darkorange !important;
+}
+
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #ff5f6d; /* Rosado */
+}
+
+/* ================== CATEGORÍAS ================== */
+.Categoria h2 {
+    text-align: center; /* Centra el texto */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff5f6d; /* Rosado */
+}
+
+.Categoria ul {
+    font-size: 16px;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.Categoria ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.Categoria ul li a {
+    text-decoration: none;
+    color: #f2f2f2; /* Texto claro */
+    font-weight: bold;
+}
+
+/* ================== CUADRÍCULA DE PRODUCTOS ================== */
+.grid {
+    display: grid;
+    max-width: 1100px;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 280px)); 
+    padding-bottom: 50px;
+}
+
+.items {
+    background-color: #333333; /* Fondo oscuro */
+    border: solid thin #ff5f6d; /* Borde rosado */
+}
+
+.items img {
+    width: 100%;
+    height: 170px;
+}
+
+.info {
+    padding: 15px;
+}
+
+/* Título del producto */
+.info h3 {
+    font-size: 2.5rem;
+    color: #ff5f6d; /* Rosado */
+}
+
+/* Descripción del producto */
+.info p {
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* Botón de compra */
+.info button {
+    padding: 1rem;
+    width: 100%;
+    background-color: #ff5f6d; /* Rosado */
+    border: none;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+/* Cambio de color al pasar el cursor */
+.info button:hover {
+    background-color: #ffc371; /* Naranja */
+    transition: all .3s;
+}
+
+/* ================== PIE DE PÁGINA ================== */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #ffc371, #ff5f6d); /* Degradado igual al de la hoja 1 */
+    border-radius: 10px;
+    color: #222;
+}
+
+/* ----- BOTÓN VOLVER ARRIBA ----- */
+.boton-subir {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #ff5f6d, #ffc371);
+    border: none;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.boton-subir:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #ffc371, #ff5f6d);
+}
+
+.boton-subir.visible {
+    display: flex;
+}
+
+.boton-subir i {
+    color: white;
+    font-size: 24px;
+}

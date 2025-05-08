@@ -1,0 +1,212 @@
+/* ----- CONFIGURACIÓN GENERAL ----- */
+
+/* Elimina márgenes y rellenos predeterminados del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Hace que padding y border no aumenten el tamaño del elemento */
+}
+
+/* Define el estilo general del cuerpo de la página */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Tipografía */
+    color: #fff; /* Color del texto */
+    background: linear-gradient(135deg, #1a1a1a, #333333); /* Color Fondo  */
+    padding: 20px; /* Espaciado interior */
+}
+
+/* ----- ENCABEZADO ----- */
+h1 {
+    text-align: center;
+    color: #ff5f6d; /* Rosado */
+}
+  
+.nav-link {
+    color: rgb(218, 23, 23) !important;
+}
+  
+.nav-link:hover {
+    color: darkorange !important;
+}
+
+h2{
+    text-align: center;
+    color: #ff5f6d; /* Rosado */
+}
+
+
+
+
+/* ----- SECCIÓN PRINCIPAL ----- */
+.seccion-principal {
+    margin: 40px auto; /* Margen superior e inferior */
+    max-width: 1000px; /* Ancho máximo */
+    text-align: center; /* Centra el contenido */
+}
+
+/* Imagen del logo/banner */
+.seccion-principal img {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: auto; /* Ajuste proporcional */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+
+
+/* Párrafos unificados */
+.fecha-actual,
+.mensaje-bienvenida {
+    font-size: 1.4rem !important;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 20px;
+    color: bisque;
+    font-weight: bold;
+}
+
+.descripcion,
+.mensaje {
+    font-size: 1.3rem !important;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 20px;
+    color: bisque;
+}
+
+.descripcion-larga {
+    font-size: 1.2rem !important;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: bisque;
+    padding: 0 20px;
+}
+
+/* Video */
+video {
+    width: 100%; /* Que ocupe todo el ancho del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 20px; /* Margen superior */
+}
+
+/* ----- PIE DE PÁGINA ----- */
+footer {
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espaciado interior */
+    background: linear-gradient(90deg, #feb47b, #ff7e5f);; /* Fondo  */
+    color: #0c0000; /* Texto gris claro */
+    margin-top: 40px; /* Margen superior */
+    font-size: 1.1rem; /* Tamaño de letra más pequeño */
+}
+
+/* ----- ESTILOS PARA LA SECCIÓN DEL CLIMA ----- */
+section.seccion-clima {
+    background-color: transparent !important;
+    margin: 20px auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.seccion-clima h2 {
+    color: #fff !important;
+    margin-bottom: 15px;
+    font-size: 2.4rem !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+section.seccion-clima #info-clima {
+    background-color: #a5cef5 !important;
+    color: #000000;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.seccion-clima #sugerencias-clima {
+    background-color: #ffffff !important;
+    color: #000000;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.seccion-clima #info-clima h3,
+section.seccion-clima #info-clima p {
+    color: #000000 !important;
+    font-size: 1.5rem !important;
+    margin: 5px 0;
+}
+
+section.seccion-clima #sugerencias-clima p {
+    font-size: 1.4rem !important;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #333 !important;
+}
+
+/* ----- BOTÓN VOLVER ARRIBA ----- */
+.boton-subir {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #ff5f6d, #ffc371);
+    border: none;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.boton-subir:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #ffc371, #ff5f6d);
+}
+
+.boton-subir.visible {
+    display: flex;
+}
+
+.boton-subir i {
+    color: white;
+    font-size: 24px;
+}
+
+/* ==============================
+   ESTILO GENERAL DEL CARRUSEL MARTINEZZ
+   ============================== */
+.carousel-item img {
+    width: auto;              /* Ancho automático para mantener la proporción */
+    height: 500px;            /* Altura fija o ajustable según necesites */
+    object-fit: contain;      /* Contiene toda la imagen sin recortar */
+    display: block;
+    margin: 0 auto;           /* Centra horizontalmente */
+}
+/* ==============================
+   FIN DEL ESTILO DEL CARRUSEL
+   ============================== */
+  
+
+
+ 
+
+  
+
+

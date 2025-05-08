@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo - MARTINEZZ</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="Hoja de estilo catalogo.Css">
+  <!-- Font Awesome para los íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Estilos del botón de volver arriba -->
+  <link rel="stylesheet" href="boton-subir.css">
+</head>
+<body>
+  <div>
+    <!-- Botón fijo en la esquina superior derecha -->
+    <button class="btn btn-outline-danger position-fixed top-0 end-0 m-3 z-3" 
+    type="button" 
+    data-bs-toggle="offcanvas" 
+    data-bs-target="#carritoOffcanvas" 
+    aria-controls="carritoOffcanvas">
+    <img src="imagenes de la página/carrito.png" alt="">
+    </button>
+  </div>
+  <br>
+
+
+  <!-- Offcanvas del carrito -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas" aria-labelledby="carritoOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 id="carritoOffcanvasLabel">Carrito de Compras</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Tabla del carrito -->
+      <div class="table-responsive">
+        <table id="lista-carrito" class="table table-striped table-bordered align-middle text-center">
+          <thead class="table-light">
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Talla</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se insertan dinámicamente los productos -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Botón para vaciar el carrito -->
+      <div class="text-end mt-3">
+        <a href="#" id="vaciar-carrito" class="btn btn-danger">Vaciar Carrito</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notificación -->
+  <div id="notificacion" class="alert alert-success position-fixed top-0 end-0 m-3" style="display:none; z-index:1050;">
+    Producto agregado al carrito
+  </div>
+  
+
+  <!-- Encabezado de la página -->
+  <h1>MARTINEZZ</h1>
+  <div>
+      <nav>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="index.php">INICIO</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link fs-5" href="catalogo.html">CATALOGO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="contacto.html">CONTACTO</a>
+          </li>
+      </ul>
+      </nav>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="Categoria">
+   <h2>Categorías</h2>
+    <ul>
+      <li><a href="#camisetas">Camisetas</a></li>
+      <li><a href="#pantalones">Pantalones</a></li>
+      <li><a href="#gorras">Gorras</a></li>
+      <li><a href="#chaquetas">Chaquetas</a></li>
+    </ul>
+  </div>
+
+  <h1 id="camisetas"> Camisetas </h1>
+  <div class="grid">
+    <div class="items">
+      <img src="Imagenes de la página/camiseta1.jpg">
+      <div class="info">
+        <h3 id="csmiseta-I">Camiseta </h3>
+        <p> $75.000</p>
+        <select name="talla-camiseta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/camiseta2.jpg">
+      <div class="info">
+        <h3 id="camiseta-II"> Camiseta  </h3>
+        <p> $70.000</p>
+        <select name="talla-camiseta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/camiseta3.jpg">
+      <div class="info">
+        <h3 id="camiseta-III"> Camiseta </h3>
+        <p> $85.000</p>
+        <select name="talla-camiseta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/camiseta4.jpg">
+      <div class="info">
+        <h3 id="camiseta-IV"> Camiseta </h3>
+        <p> $89.900</p>
+        <select name="talla-camiseta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/camiseta5.jpg">
+      <div class="info">
+        <h3 id="camiseta-V"> Camiseta </h3>
+        <p> $79.900</p>
+        <select name="talla-camiseta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/camiseta6.jpg">
+      <div class="info">
+        <h3 id="camiseta-VI"> Camiseta </h3>
+        <p> $90.000</p>
+        <select name="talla-camiseta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/camiseta7.jpg">
+      <div class="info">
+        <h3 id="camiseta-VII"> Camiseta </h3>
+        <p> $90.000</p>
+        <select name="talla-camiseta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/camiseta8.jpg">
+      <div class="info">
+        <h3 id="camiseta-VIII"> Camiseta </h3>
+        <p> $70.000</p>
+        <select name="talla-camiseta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/camiseta9.jpg">
+      <div class="info">
+        <h3 id="camiseta-IX"> Camiseta </h3>
+        <p> $79.900</p>
+        <select name="talla-camiseta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+  
+        
+  <div class="container">
+    <div class="Categoria">
+      <h2>Categorías</h2>
+    <ul>
+      <li><a href="#camisetas">Camisetas</a></li>
+      <li><a href="#pantalones">Pantalones</a></li>
+      <li><a href="#gorras">Gorras</a></li>
+      <li><a href="#chaquetas">Chaquetas</a></li>
+    </ul>
+  </div>
+
+  <h1 id="pantalones"> Pantalones </h1>
+  <div class="grid">
+    <div class="items">
+      <img src="Imagenes de la página/pantalón1.jpg">
+      <div class="info">
+        <h3> pantalón </h3>
+        <p> $180.000</p>
+        <select name="talla-pantalon" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="32">32</option>
+          <option value="34">34</option>
+          <option value="36">36</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/pantalón2.jpg">
+      <div class="info">
+        <h3> Pantalón </h3>
+        <p> $175.000</p>
+        <select name="talla-pantalon" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="32">32</option>
+          <option value="34">34</option>
+          <option value="36">36</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/pantalón3.jpg">
+      <div class="info">
+        <h3> Pantalón </h3>
+        <p> $150.000</p>
+        <select name="talla-pantalon" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="32">32</option>
+          <option value="34">34</option>
+          <option value="36">36</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/pantalón4.jpg">
+      <div class="info">
+        <h3> Pantalón </h3>
+        <p> $190.000</p>
+        <select name="talla-pantalon" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="32">32</option>
+          <option value="34">34</option>
+          <option value="36">36</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/pantalón5.jpg">
+      <div class="info">
+        <h3> Pantalón </h3>
+        <p> $190.000</p>
+        <select name="talla-pantalon" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="32">32</option>
+          <option value="34">34</option>
+          <option value="36">36</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/pantalón6.jpg">
+      <div class="info">
+        <h3> Pantalón </h3>
+        <p> $155.000</p>
+        <select name="talla-pantalon" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="32">32</option>
+          <option value="34">34</option>
+          <option value="36">36</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/pantalón7.jpg">
+      <div class="info">
+        <h3> Pantalón </h3>
+        <p> $195.000</p>
+        <select name="talla-pantalon" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="32">32</option>
+          <option value="34">34</option>
+          <option value="36">36</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/pantalón8.jpg">
+      <div class="info">
+        <h3> Pantalón </h3>
+        <p> $189.900</p>
+        <select name="talla-pantalon" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="32">32</option>
+          <option value="34">34</option>
+          <option value="36">36</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/pantalón9.jpg">
+      <div class="info">
+        <h3> Pantalón </h3>
+        <p> $170.000</p>
+        <select name="talla-pantalon" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="32">32</option>
+          <option value="34">34</option>
+          <option value="36">36</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="Categoria">
+      <h2>Categorías</h2>
+    <ul>
+        <li><a href="#camisetas">Camisetas</a></li>
+        <li><a href="#pantalones">Pantalones</a></li>
+        <li><a href="#gorras">Gorras</a></li>
+        <li><a href="#chaquetas">Chaquetas</a></li>
+    </ul>
+  </div>
+
+  <h1 id="chaquetas"> Chaquetas </h1>
+  <div class="grid">
+    <div class="items">
+      <img src="Imagenes de la página/chaqueta1.jpg">
+      <div class="info">
+        <h3> Chaqueta </h3>
+        <p> $145.000</p>
+        <select name="talla-chaqueta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/chaqueta2.jpg">
+      <div class="info">
+        <h3> Chaqueta </h3>
+        <p> $175.000</p>
+        <select name="talla-chaqueta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/chaqueta3.jpg">
+      <div class="info">
+        <h3> Chaqueta </h3>
+        <p> $190.000</p>
+        <select name="talla-chaqueta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/chaqueta4.jpg">
+      <div class="info">
+        <h3> Chaqueta </h3>
+        <p> $180.000</p>
+        <select name="talla-chaqueta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/chaqueta5.jpg">
+      <div class="info">
+        <h3> Chaqueta </h3>
+        <p> $199.900</p>
+        <select name="talla-chaqueta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/chaqueta6.jpg">
+      <div class="info">
+        <h3> Chaqueta </h3>
+        <p> $199.000</p>
+        <select name="talla-chaqueta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/chaqueta7.jpg">
+      <div class="info">
+        <h3> Chaqueta </h3>
+        <p> $210.000</p>
+        <select name="talla-chaqueta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/chaqueta8.jpg">
+      <div class="info">
+        <h3> Chaqueta </h3>
+        <p> $185.000</p>
+        <select name="talla-chaqueta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/chaqueta3.jpg">
+      <div class="info">
+        <h3> Chaqueta </h3>
+        <p> $190.000</p>
+        <select name="talla-chaqueta" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+    
+
+  <div class="container">
+    <div class="Categoria">
+      <h2>Categorías</h2>
+    <ul>
+        <li><a href="#camisetas">Camisetas</a></li>
+        <li><a href="#pantalones">Pantalones</a></li>
+        <li><a href="#gorras">Gorras</a></li>
+        <li><a href="#chaquetas">Chaquetas</a></li>
+    </ul>
+  </div>
+
+  <h1 id="gorras"> Gorras </h1>
+  <div class="grid">
+    <div class="items">
+      <img src="Imagenes de la página/gorra1.jpg">
+      <div class="info">
+        <h3> Gorra </h3>
+        <p> $199.900</p>
+        <select name="talla-gorra" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/gorra2.jpg">
+      <div class="info">
+        <h3> Gorra </h3>
+        <p> $199.900</p>
+        <select name="talla-gorra" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/gorra3.jpg">
+      <div class="info">
+        <h3>Gorra</h3>
+        <p> $199.900</p>
+        <select name="talla-gorra" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/gorra4.jpg">
+      <div class="info">
+        <h3> Gorra </h3>
+        <p> $199.900</p>
+        <select name="talla-gorra" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/gorra5.jpg">
+      <div class="info">
+        <h3> Gorra </h3>
+        <p> $199.900</p>
+        <select name="talla-gorra" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  
+    <div class="items">
+      <img src="Imagenes de la página/gorra6.jpg">
+      <div class="info">
+        <h3> Gorra</h3>
+        <p> $199.000</p>
+        <select name="talla-gorra" required>
+          <option value="" disabled selected>Selecciona una talla</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <button> Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+  
+
+ <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 MARTINEZZ. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón para volver arriba -->
+  <button class="boton-subir" id="botonSubir" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+ <!-- Bootstrap -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+ <script src="JavaScript-Archivo.js"></script>
+  <script src="boton-subir.js"></script>
+
+</body>
+</html>
